@@ -1,0 +1,268 @@
+﻿<ResourceDictionary
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <Style x:Key="ScrollBarButtonStyle" TargetType="{x:Type RepeatButton}">
+    <Setter Property="OverridesDefaultStyle" Value="True" />
+    <Setter Property="Focusable" Value="False" />
+    <Setter Property="IsTabStop" Value="False" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type RepeatButton}">
+          <Grid>
+            <Border x:Name="LayoutRoot" CornerRadius="3,3,3,3">
+              <Border.LayoutTransform>
+                <TransformGroup>
+                  <ScaleTransform ScaleX="1" ScaleY="1"/>
+                  <SkewTransform AngleX="0" AngleY="0"/>
+                  <RotateTransform Angle="0"/>
+                  <TranslateTransform X="0" Y="0"/>
+                </TransformGroup>
+              </Border.LayoutTransform>
+              <Border.Background>
+                <LinearGradientBrush StartPoint="1.07559,1.7294" EndPoint="-0.0545848,1.7294">
+                  <GradientStop Color="#FE441E04" Offset="0" />
+                  <GradientStop Color="#FE782400" Offset="0.484177" />
+                  <GradientStop Color="#FE8B2C03" Offset="0.489451" />
+                  <GradientStop Color="#FEFCB95E" Offset="1" />
+                </LinearGradientBrush>
+              </Border.Background>
+              <Border CornerRadius="3,3,3,3" BorderThickness="0.6,0.6,0.6,0.6" Margin="0.159,0.159,0.159,0.159">
+                <Border.BorderBrush>
+                  <LinearGradientBrush StartPoint="0.0174093,2.61743" EndPoint="0.963627,2.61743">
+                    <GradientStop Color="#00FFFFFF" Offset="0" />
+                    <GradientStop Color="#5BFFFFFF" Offset="0.493182" />
+                    <GradientStop Color="#00FFFFFF" Offset="1" />
+                  </LinearGradientBrush>
+                </Border.BorderBrush>
+                <Grid Width="7.8" Height="6.7">
+                  <Grid x:Name="UpRightArrow">
+                    <Path Width="Auto" Height="Auto" Stretch="Fill" Fill="#CDD7D7D7" Data="F1 M 4.78809,0.525818C 4.66272,0.525818 4.53992,0.591858 4.42163,0.804504L 0.658447,7.32245C 0.452637,7.68243 0.626404,7.95941 1.02625,7.95941L 8.56219,7.95941C 8.93329,7.95941 9.16492,7.7652 8.922,7.33917L 5.14832,0.80304C 5.01978,0.567078 4.90723,0.525818 4.78809,0.525818 Z " Margin="0.397,0.387,0.359,0.372" />
+                    <Path Width="Auto" Height="Auto" Stretch="Fill" Data="F1 M 4.22791,0.696838L 0.401062,7.27197C 0.139404,7.77435 0.504272,8.19244 0.941101,8.19244L 8.65717,8.19244C 9.06262,8.19244 9.43939,7.82037 9.12177,7.2168C 7.86731,5.02802 5.65271,1.14594 5.3584,0.650391C 5.06421,0.154846 4.59961,0.139343 4.22791,0.696838 Z " StrokeThickness="0.278763" StrokeLineJoin="Round" Margin="0,0,0,0">
+                      <Path.Stroke>
+                        <LinearGradientBrush StartPoint="0.0198126,1.37807" EndPoint="1.20408,1.37807">
+                          <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                              <SkewTransform CenterX="0.0198126" CenterY="1.37807" AngleX="-6.66701" AngleY="0" />
+                              <RotateTransform CenterX="0.0198126" CenterY="1.37807" Angle="-48.3335" />
+                            </TransformGroup>
+                          </LinearGradientBrush.RelativeTransform>
+                          <GradientStop Color="#005F2D00" Offset="0" />
+                          <GradientStop Color="#663A1800" Offset="1" />
+                        </LinearGradientBrush>
+                      </Path.Stroke>
+                    </Path>
+                    <Path Width="Auto" Height="Auto" Stretch="Fill" Fill="#9AFFFFFF" Data="F1 M 5.23132,1.28851C 5.12683,1.28851 5.02466,1.34351 4.92621,1.52051L 1.79358,6.94641C 1.62219,7.24609 1.76678,7.47668 2.09961,7.47668L 8.37299,7.47668C 8.68188,7.47668 8.87476,7.315 8.67249,6.96033L 5.53113,1.51929C 5.42407,1.32281 5.33044,1.28851 5.23132,1.28851 Z " Margin="1.547,1.15,0.624,0.855" />
+                  </Grid>
+                  <Grid x:Name="DownLeftArrow">
+                    <Path Width="Auto" Height="Auto" Stretch="Fill" Fill="#CDD7D7D7" Data="F1 M 8.92175,0.56604C 8.85907,0.457397 8.74042,0.384094 8.49719,0.388L 0.970886,0.388C 0.556152,0.389771 0.403198,0.678711 0.603027,1.02496L 4.37103,7.55127C 4.55658,7.87268 4.8407,7.97614 5.08813,7.55273L 8.86176,1.0166C 9.00189,0.787292 8.98138,0.669189 8.92175,0.56604 Z " Margin="0.388,0.388,0.39,0.362" />
+                    <Path Width="Auto" Height="Auto" Stretch="Fill" Data="F1 M 8.49261,0.166016L 0.88501,0.139404C 0.319092,0.164001 0.139404,0.688965 0.357849,1.06732L 4.21582,7.74963C 4.41864,8.10077 4.92932,8.24103 5.29315,7.66412C 6.56146,5.48334 8.8161,1.62445 9.09814,1.12183C 9.38025,0.619263 9.16132,0.209167 8.49261,0.166016 Z " StrokeThickness="0.278764" StrokeLineJoin="Round" Margin="0,0,0,0">
+                      <Path.Stroke>
+                        <LinearGradientBrush StartPoint="-0.310526,0.26593" EndPoint="0.809984,0.26593">
+                          <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                              <SkewTransform CenterX="-0.310526" CenterY="0.26593" AngleX="3.41153" AngleY="0" />
+                              <RotateTransform CenterX="-0.310526" CenterY="0.26593" Angle="16.7934" />
+                            </TransformGroup>
+                          </LinearGradientBrush.RelativeTransform>
+                          <GradientStop Color="#005F2D00" Offset="0" />
+                          <GradientStop Color="#663A1800" Offset="1" />
+                        </LinearGradientBrush>
+                      </Path.Stroke>
+                    </Path>
+                    <Path Width="Auto" Height="Auto" Stretch="Fill" Fill="#9AFFFFFF" Data="F1 M 8.48285,1.33118C 8.4306,1.24072 8.33191,1.17969 8.12939,1.18292L 1.86414,1.18292C 1.51892,1.18439 1.39148,1.42493 1.55786,1.7132L 4.69458,7.14606C 4.84906,7.41357 5.08545,7.49976 5.2915,7.14728L 8.43286,1.70624C 8.5495,1.51532 8.53241,1.41705 8.48285,1.33118 Z " Margin="1.357,1.183,0.837,0.814" />
+                  </Grid>
+                </Grid>
+              </Border>
+            </Border>
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger Property="Tag" Value="Up">
+              <Setter TargetName="DownLeftArrow" Property="Visibility" Value="Collapsed"/>
+            </Trigger>
+            <Trigger Property="Tag" Value="Down">
+              <Setter TargetName="UpRightArrow" Property="Visibility" Value="Collapsed"/>
+            </Trigger>
+            <Trigger Property="Tag" Value="Left">
+              <Setter TargetName="LayoutRoot" Property="LayoutTransform">
+                <Setter.Value>
+                  <RotateTransform Angle="90"/>
+                </Setter.Value>
+              </Setter>
+              <Setter TargetName="UpRightArrow" Property="Visibility" Value="Collapsed"/>
+            </Trigger>
+            <Trigger Property="Tag" Value="Right">
+              <Setter TargetName="LayoutRoot" Property="LayoutTransform">
+                <Setter.Value>
+                  <RotateTransform Angle="90"/>
+                </Setter.Value>
+              </Setter>
+              <Setter TargetName="DownLeftArrow" Property="Visibility" Value="Collapsed"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <Style x:Key="ScrollBarThumbStyle" TargetType="{x:Type Thumb}">
+    <Setter Property="OverridesDefaultStyle" Value="True" />
+    <Setter Property="IsTabStop" Value="False" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Thumb}">
+          <Border x:Name="LayoutRoot" CornerRadius="3,3,3,3">
+            <Border.LayoutTransform>
+              <TransformGroup>
+                <ScaleTransform ScaleX="1" ScaleY="1"/>
+                <SkewTransform AngleX="0" AngleY="0"/>
+                <RotateTransform Angle="0"/>
+                <TranslateTransform X="0" Y="0"/>
+              </TransformGroup>
+            </Border.LayoutTransform>
+            <Border.Background>
+              <LinearGradientBrush StartPoint="1.07559,1.7294" EndPoint="-0.0545848,1.7294">
+                <GradientStop Color="#FE441E04" Offset="0" />
+                <GradientStop Color="#FE782400" Offset="0.484177" />
+                <GradientStop Color="#FE8B2C03" Offset="0.489451" />
+                <GradientStop Color="#FEFCB95E" Offset="1" />
+              </LinearGradientBrush>
+            </Border.Background>
+            <Border CornerRadius="3,3,3,3" BorderThickness="0.6,0.6,0.6,0.6" Margin="0.159,0.159,0.159,0.159">
+              <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0.0174093,2.61743" EndPoint="0.963627,2.61743">
+                  <GradientStop Color="#00FFFFFF" Offset="0" />
+                  <GradientStop Color="#5BFFFFFF" Offset="0.493182" />
+                  <GradientStop Color="#00FFFFFF" Offset="1" />
+                </LinearGradientBrush>
+              </Border.BorderBrush>
+            </Border>
+          </Border>
+          <ControlTemplate.Triggers>
+            <Trigger Property="Tag" Value="Horizontal">
+              <Setter TargetName="LayoutRoot" Property="LayoutTransform">
+                <Setter.Value>
+                  <RotateTransform Angle="90"/>
+                </Setter.Value>
+              </Setter>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <Style x:Key="ScrollBarPageButton" TargetType="{x:Type RepeatButton}">
+    <Setter Property="OverridesDefaultStyle" Value="True" />
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="Focusable" Value="False" />
+    <Setter Property="IsTabStop" Value="False" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type RepeatButton}">
+          <Border Background="{TemplateBinding Background}" />
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <Style TargetType="{x:Type ScrollBar}">
+    <Setter Property="Stylus.IsPressAndHoldEnabled" Value="False" />
+    <Setter Property="Stylus.IsFlicksEnabled" Value="False" />
+    <Setter Property="Background" Value="#FFB3906E" />
+    <Setter Property="Cursor" Value="Hand" />
+    <Setter Property="Foreground" Value="{StaticResource {x:Static SystemColors.ControlTextBrushKey}}" />
+    <Setter Property="Width" Value="{StaticResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}" />
+    <Setter Property="MinWidth" Value="{StaticResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type ScrollBar}">
+          <Grid SnapsToDevicePixels="True" Background="{TemplateBinding Background}">
+            <Grid.RowDefinitions>
+              <RowDefinition MaxHeight="{StaticResource {x:Static SystemParameters.VerticalScrollBarButtonHeightKey}}" />
+              <RowDefinition Height="0.00001*" />
+              <RowDefinition MaxHeight="{StaticResource {x:Static SystemParameters.VerticalScrollBarButtonHeightKey}}" />
+            </Grid.RowDefinitions>
+            <RepeatButton Style="{StaticResource ScrollBarButtonStyle}" Command="{x:Static ScrollBar.LineUpCommand}" Tag="Up" />
+            <Track x:Name="PART_Track" Grid.Row="1" IsDirectionReversed="True">
+              <Track.DecreaseRepeatButton>
+                <RepeatButton Style="{StaticResource ScrollBarPageButton}" Command="{x:Static ScrollBar.PageUpCommand}" />
+              </Track.DecreaseRepeatButton>
+              <Track.IncreaseRepeatButton>
+                <RepeatButton Style="{StaticResource ScrollBarPageButton}" Command="{x:Static ScrollBar.PageDownCommand}" />
+              </Track.IncreaseRepeatButton>
+              <Track.Thumb>
+                <Thumb Style="{StaticResource ScrollBarThumbStyle}" MinHeight="20" Tag="Vertical"/>
+              </Track.Thumb>
+            </Track>
+            <RepeatButton Style="{StaticResource ScrollBarButtonStyle}" Grid.Row="2" Command="{x:Static ScrollBar.LineDownCommand}" Tag="Down" />
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+    <Style.Triggers>
+      <Trigger Property="Orientation" Value="Horizontal">
+        <Setter Property="Width" Value="Auto" />
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="Background" Value="#FFB3906E" />
+        <Setter Property="Height" Value="{StaticResource {x:Static SystemParameters.HorizontalScrollBarHeightKey}}" />
+        <Setter Property="MinHeight" Value="{StaticResource {x:Static SystemParameters.HorizontalScrollBarHeightKey}}" />
+        <Setter Property="Template">
+          <Setter.Value>
+            <ControlTemplate TargetType="{x:Type ScrollBar}">
+              <Grid SnapsToDevicePixels="True" Background="{TemplateBinding Background}" RenderTransformOrigin="0.5,0.5">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition MaxWidth="{StaticResource {x:Static SystemParameters.HorizontalScrollBarButtonWidthKey}}" Width="17" />
+                  <ColumnDefinition Width="*" />
+                  <ColumnDefinition MaxWidth="{StaticResource {x:Static SystemParameters.HorizontalScrollBarButtonWidthKey}}" Width="17" />
+                </Grid.ColumnDefinitions>
+                <RepeatButton Style="{DynamicResource ScrollBarButtonStyle}" Command="{x:Static ScrollBar.LineLeftCommand}" Tag="Left" />
+                <Track x:Name="PART_Track" Grid.Column="1" Visibility="Visible">
+                  <Track.DecreaseRepeatButton>
+                    <RepeatButton Style="{StaticResource ScrollBarPageButton}" Command="{x:Static ScrollBar.PageLeftCommand}" />
+                  </Track.DecreaseRepeatButton>
+                  <Track.IncreaseRepeatButton>
+                    <RepeatButton Style="{StaticResource ScrollBarPageButton}" Command="{x:Static ScrollBar.PageRightCommand}" />
+                  </Track.IncreaseRepeatButton>
+                  <Track.Thumb>
+                    <Thumb Style="{StaticResource ScrollBarThumbStyle}" Tag="Horizontal"/>
+                  </Track.Thumb>
+                </Track>
+                <RepeatButton Style="{StaticResource ScrollBarButtonStyle}" Grid.Column="2" Command="{x:Static ScrollBar.LineRightCommand}" Tag="Right"/>
+              </Grid>
+            </ControlTemplate>
+          </Setter.Value>
+        </Setter>
+      </Trigger>
+    </Style.Triggers>
+  </Style>
+
+  <Style TargetType="{x:Type ScrollViewer}">
+    <Setter Property="Background" Value="{x:Null}" />
+    <Setter Property="Focusable" Value="False" />
+    <Setter Property="ScrollViewer.CanContentScroll" Value="False" />
+    <Setter Property="BorderThickness" Value="0" />
+    <Setter Property="SnapsToDevicePixels" Value="True" />
+    <Setter Property="ClipToBounds" Value="False" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type ScrollViewer}">
+          <Grid SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Background="{x:Null}" ClipToBounds="{TemplateBinding ClipToBounds}">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+              <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*" />
+              <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <ScrollContentPresenter x:Name="PART_ScrollContentPresenter" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" ClipToBounds="{TemplateBinding ClipToBounds}" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" CanContentScroll="{TemplateBinding CanContentScroll}" KeyboardNavigation.DirectionalNavigation="Local" Margin="{TemplateBinding Padding}" />
+            <ScrollBar x:Name="PART_HorizontalScrollBar" Grid.Row="1" Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}" Orientation="Horizontal" ViewportSize="{TemplateBinding ViewportWidth}" Maximum="{TemplateBinding ScrollableWidth}" Minimum="0.0" Value="{Binding Path=HorizontalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" Margin="{Binding Path=HorizontalScrollbarMargin, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type ListView}}}" />
+            <ScrollBar x:Name="PART_VerticalScrollBar" Grid.Column="1" Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}" Orientation="Vertical" ViewportSize="{TemplateBinding ViewportHeight}" Maximum="{TemplateBinding ScrollableHeight}" Minimum="0.0" Value="{Binding Path=VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" Margin="{Binding Path=VerticalScrollbarMargin, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type ListView}}}" />
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+</ResourceDictionary>

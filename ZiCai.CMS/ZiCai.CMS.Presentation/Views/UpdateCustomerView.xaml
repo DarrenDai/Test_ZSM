@@ -1,0 +1,109 @@
+﻿<UserControl x:Class="ZiCai.CMS.Presentation.Views.UpdateCustomerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              Control.Background="{StaticResource COMMON_VIEW_BACKGROUND}" >
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <Style x:Key="Local_SummaryTextBlockStyle" Style.TargetType="{x:Type TextBlock}" Style.BasedOn="{StaticResource {x:Type TextBlock}}">
+        <Setter Setter.Property="FrameworkElement.VerticalAlignment" Setter.Value="Center" />
+        <Setter Setter.Property="FrameworkElement.HorizontalAlignment" Setter.Value="Right" />
+        <Setter Setter.Property="TextBlock.Foreground" Setter.Value="#FFFFFFFF" />
+        <Setter Setter.Property="FrameworkElement.Margin" Setter.Value="0,0,0,0" />
+        <Setter Setter.Property="TextBlock.FontSize" Setter.Value="14" />
+      </Style>
+      <Style x:Key="Local_SummaryTextBoxStyle"  Style.TargetType="{x:Type TextBox}" Style.BasedOn="{StaticResource {x:Type TextBox}}">
+        <Setter Setter.Property="FrameworkElement.Height" Setter.Value="25" />
+        <Setter Setter.Property="Control.FontSize" Setter.Value="15" />
+        <Setter Setter.Property="FrameworkElement.HorizontalAlignment" Setter.Value="Stretch" />
+        <Setter Setter.Property="FrameworkElement.Margin" Setter.Value="0,3" />
+      </Style>
+      <Style x:Key="Local_DatePickerStyle"  Style.TargetType="{x:Type DatePicker}" Style.BasedOn="{StaticResource {x:Type DatePicker}}">
+        <Setter Setter.Property="FrameworkElement.HorizontalAlignment" Setter.Value="Left" />
+        <Setter Setter.Property="UIElement.Focusable" Setter.Value="False" />
+        <Setter Setter.Property="FrameworkElement.Width" Setter.Value="120" />
+        <Setter Setter.Property="FrameworkElement.Height" Setter.Value="25" />
+      </Style>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid FrameworkElement.Margin="10">
+    <Grid.RowDefinitions>
+      <RowDefinition RowDefinition.Height="Auto" />
+      <RowDefinition RowDefinition.Height="*" />
+      <RowDefinition RowDefinition.Height="Auto" />
+      <RowDefinition RowDefinition.Height="Auto" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition />
+      <ColumnDefinition ColumnDefinition.Width="Auto" />
+    </Grid.ColumnDefinitions>
+    <Grid Grid.Row="0" Grid.ColumnSpan="2">
+      <TextBlock TextBlock.Text="编辑会员信息" TextBlock.FontSize="40" FrameworkElement.Margin="0,20" FrameworkElement.HorizontalAlignment="Center" TextBlock.Foreground="#FFFFFFFF" />
+    </Grid>
+    <Grid Grid.Row="1">
+      <Grid.RowDefinitions>
+        <RowDefinition RowDefinition.Height="Auto" />
+        <RowDefinition RowDefinition.Height="Auto" />
+      </Grid.RowDefinitions>
+      <Border Border.Background="#99621D00" Border.CornerRadius="6" FrameworkElement.Margin="0,0,0,10">
+        <Grid FrameworkElement.Margin="10">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition ColumnDefinition.Width="98" />
+            <ColumnDefinition ColumnDefinition.Width="150" />
+          </Grid.ColumnDefinitions>
+          <TextBlock FrameworkElement.Style="{StaticResource Local_SummaryTextBlockStyle}" TextBlock.Text="会员编号：" />
+          <TextBlock TextBlock.Name="m_No" Grid.Row="0" Grid.Column="1" FrameworkElement.HorizontalAlignment="Left" TextBlock.FontSize="18" TextBlock.FontWeight="Bold" FrameworkElement.Style="{StaticResource Local_SummaryTextBlockStyle}" TextBlock.Text="{Binding CustomerInfo.CustomerNo}" />
+        </Grid>
+      </Border>
+      <Border Border.Background="#99621D00" Border.CornerRadius="6" Grid.Row="1">
+        <Grid FrameworkElement.Margin="10">
+          <Grid.RowDefinitions>
+            <RowDefinition RowDefinition.Height="40" />
+            <RowDefinition RowDefinition.Height="40" />
+            <RowDefinition RowDefinition.Height="40" />
+            <RowDefinition RowDefinition.Height="40" />
+            <RowDefinition RowDefinition.Height="70" />
+            <RowDefinition RowDefinition.Height="70" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition ColumnDefinition.Width="Auto" />
+            <ColumnDefinition ColumnDefinition.Width="150" />
+            <ColumnDefinition ColumnDefinition.Width="180" />
+            <ColumnDefinition ColumnDefinition.Width="150" />
+            <ColumnDefinition ColumnDefinition.Width="180" />
+            <ColumnDefinition ColumnDefinition.Width="150" />
+          </Grid.ColumnDefinitions>
+          <TextBlock Grid.Row="0" Grid.Column="0" FrameworkElement.Style="{StaticResource Local_SummaryTextBlockStyle}" TextBlock.Text="加入日期：" />
+          <DatePicker DatePicker.Name="m_CreateDate" Grid.Row="0" Grid.Column="1" FrameworkElement.Style="{StaticResource Local_DatePickerStyle}" DatePicker.Text="{Binding CustomerInfo.CreateDate}" />
+          <TextBlock Grid.Row="0" Grid.Column="2" FrameworkElement.Style="{StaticResource Local_SummaryTextBlockStyle}" TextBlock.Text="美容顾问：" />
+          <TextBox TextBox.Name="m_BeautyAdvisor" Grid.Row="0" Grid.Column="3" FrameworkElement.Style="{StaticResource Local_SummaryTextBoxStyle}" TextBox.Text="{Binding CustomerInfo.BeautyAdvisor}" />
+          <TextBlock Grid.Row="1" Grid.Column="0" FrameworkElement.Style="{StaticResource Local_SummaryTextBlockStyle}" TextBlock.Text="会员姓名：" />
+          <TextBox TextBox.Name="m_Name" Grid.Row="1" Grid.Column="1" FrameworkElement.Style="{StaticResource Local_SummaryTextBoxStyle}" TextBox.Text="{Binding CustomerInfo.CustomerName}" />
+          <TextBlock Grid.Row="1" Grid.Column="2" FrameworkElement.Style="{StaticResource Local_SummaryTextBlockStyle}" TextBlock.Text="出生日期：" />
+          <DatePicker DatePicker.Name="m_Birthday" Grid.Row="1" Grid.Column="3" FrameworkElement.Style="{StaticResource Local_DatePickerStyle}" DatePicker.Text="{Binding CustomerInfo.Birthday}" />
+          <TextBlock Grid.Row="1" Grid.Column="4" FrameworkElement.Style="{StaticResource Local_SummaryTextBlockStyle}" TextBlock.Text="联系电话：" />
+          <TextBox TextBox.Name="m_TeleNumber" Grid.Row="1" Grid.Column="5" FrameworkElement.Style="{StaticResource Local_SummaryTextBoxStyle}" TextBox.Text="{Binding CustomerInfo.TelephoneNumber}" />
+          <TextBlock Grid.Row="2" Grid.Column="0" FrameworkElement.Style="{StaticResource Local_SummaryTextBlockStyle}" TextBlock.Text="联系地址：" />
+          <TextBox TextBox.Name="m_Address" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" FrameworkElement.Style="{StaticResource Local_SummaryTextBoxStyle}" TextBox.Text="{Binding CustomerInfo.Address}" />
+          <TextBlock Grid.Row="2" Grid.Column="4" FrameworkElement.Style="{StaticResource Local_SummaryTextBlockStyle}" TextBlock.Text="工作行业：" />
+          <TextBox TextBox.Name="m_Trade" Grid.Row="2" Grid.Column="5" FrameworkElement.Style="{StaticResource Local_SummaryTextBoxStyle}" TextBox.Text="{Binding CustomerInfo.Trade}" />
+          <TextBlock Grid.Row="3" Grid.Column="0" FrameworkElement.Style="{StaticResource Local_SummaryTextBlockStyle}" TextBlock.Text="E-mail：" />
+          <TextBox TextBox.Name="m_Email" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" FrameworkElement.Style="{StaticResource Local_SummaryTextBoxStyle}" TextBox.Text="{Binding CustomerInfo.Email}" />
+          <TextBlock Grid.Row="3" Grid.Column="4" FrameworkElement.Style="{StaticResource Local_SummaryTextBlockStyle}" TextBlock.Text="QQ：" />
+          <TextBox TextBox.Name="m_QQ" Grid.Row="3" Grid.Column="5" FrameworkElement.Style="{StaticResource Local_SummaryTextBoxStyle}" TextBox.Text="{Binding CustomerInfo.QQNumber}" />
+          <TextBlock Grid.Row="4" Grid.Column="0" FrameworkElement.Margin="0,7,0,0" FrameworkElement.VerticalAlignment="Top" FrameworkElement.Style="{StaticResource Local_SummaryTextBlockStyle}" TextBlock.Text="会员皮肤状况：" />
+          <TextBox TextBox.Name="m_SkinCondition" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="5" FrameworkElement.Height="60" TextBox.TextWrapping="Wrap" FrameworkElement.Style="{StaticResource Local_SummaryTextBoxStyle}" TextBox.Text="{Binding CustomerInfo.SkinCondition}" />
+          <TextBlock Grid.Row="5" Grid.Column="0" FrameworkElement.Style="{StaticResource Local_SummaryTextBlockStyle}" FrameworkElement.Margin="0,7,0,0" FrameworkElement.VerticalAlignment="Top" TextBlock.Text="备注：" />
+          <TextBox TextBox.Name="Comment" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="5" FrameworkElement.Height="60" TextBox.TextWrapping="Wrap" FrameworkElement.Style="{StaticResource Local_SummaryTextBoxStyle}" TextBox.Text="{Binding CustomerInfo.Comment}" />
+        </Grid>
+      </Border>
+    </Grid>
+    <Grid Grid.Row="2">
+      <Button ContentControl.Content="保存" FrameworkElement.Width="70" FrameworkElement.Height="35" FrameworkElement.HorizontalAlignment="Center" ButtonBase.Command="{Binding UpdateInfoCommand}" />
+    </Grid>
+    <Grid Grid.Row="3" Grid.Column="1">
+      <StackPanel StackPanel.Orientation="Vertical">
+        <Button ContentControl.Content="返回" FrameworkElement.Width="50" FrameworkElement.Height="50" ButtonBase.Command="{Binding BackCommand}" />
+      </StackPanel>
+    </Grid>
+  </Grid>
+</UserControl>

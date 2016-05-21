@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZiCai.CMS.Launcher", "ZiCai.CMS.Launcher\ZiCai.CMS.Launcher.csproj", "{49591876-1536-40CA-B17F-C8947B161685}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZiCai.CMS.Common", "ZiCai.CMS.Common\ZiCai.CMS.Common.csproj", "{66F0FB95-F679-42B8-9725-4133463EA987}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZiCai.CMS.Framework", "ZiCai.CMS.Framework\ZiCai.CMS.Framework.csproj", "{5EC3206C-4D99-4640-B003-8994A78B66BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZiCai.CMS.Presentation", "ZiCai.CMS.Presentation\ZiCai.CMS.Presentation.csproj", "{4AD849B7-2954-4E8B-BB27-7B654AD6AA0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZiCai.CMS.ViewModels", "ZiCai.CMS.ViewModels\ZiCai.CMS.ViewModels.csproj", "{B0D28F7F-CE0A-4755-A3ED-BF4525BCC36F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZiCai.CMS.WPF.Extensions", "ZiCai.CMS.WPF.Extensions\ZiCai.CMS.WPF.Extensions.csproj", "{AADFF609-D72A-4FC2-8409-D9265C8B99C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49591876-1536-40CA-B17F-C8947B161685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49591876-1536-40CA-B17F-C8947B161685}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49591876-1536-40CA-B17F-C8947B161685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49591876-1536-40CA-B17F-C8947B161685}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66F0FB95-F679-42B8-9725-4133463EA987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66F0FB95-F679-42B8-9725-4133463EA987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66F0FB95-F679-42B8-9725-4133463EA987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66F0FB95-F679-42B8-9725-4133463EA987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EC3206C-4D99-4640-B003-8994A78B66BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EC3206C-4D99-4640-B003-8994A78B66BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EC3206C-4D99-4640-B003-8994A78B66BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EC3206C-4D99-4640-B003-8994A78B66BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AD849B7-2954-4E8B-BB27-7B654AD6AA0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AD849B7-2954-4E8B-BB27-7B654AD6AA0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AD849B7-2954-4E8B-BB27-7B654AD6AA0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AD849B7-2954-4E8B-BB27-7B654AD6AA0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0D28F7F-CE0A-4755-A3ED-BF4525BCC36F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0D28F7F-CE0A-4755-A3ED-BF4525BCC36F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0D28F7F-CE0A-4755-A3ED-BF4525BCC36F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0D28F7F-CE0A-4755-A3ED-BF4525BCC36F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AADFF609-D72A-4FC2-8409-D9265C8B99C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AADFF609-D72A-4FC2-8409-D9265C8B99C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AADFF609-D72A-4FC2-8409-D9265C8B99C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AADFF609-D72A-4FC2-8409-D9265C8B99C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

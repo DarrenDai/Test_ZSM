@@ -1,0 +1,10 @@
+﻿<Application x:Class="ZSM.CMS.Launcher.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             
+             >
+  <Application.Resources>
+    <!--xmlns:converter="clr-namespace:DDSoft.Common.Converters;assembly=DDSoft.Common"-->
+    <!--<converter:ObjectToBooleanConverter x:Key="ObjectToBooleanConverter" />-->
+  </Application.Resources>
+</Application>

@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="ZSM.CMS.Presentation.Views.DataMangement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:ZSM.CMS.Presentation.Controls">
+  <UserControl.Background>
+    <ImageBrush ImageSource="/ZSM.CMS.Presentation;component/Images/common-bk.jpg"/>
+  </UserControl.Background>
+  
+  <UserControl.Resources>
+  </UserControl.Resources>
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <TextBlock Style="{StaticResource PageTitleStyle}" Text="数据管理"/>
+    <Grid Grid.Row="1" Margin="10 0 10 10">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="Auto"/>
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+
+      <Button Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"
+              Width="150" Height="150" Margin="40 0" Command="{Binding BackUpCommand}">
+        <Button.Content>
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*" />
+              <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Image Source="/ZSM.CMS.Presentation;component/Images/data-backup.png"/>
+            <TextBlock Grid.Row="1" Text="备份数据" TextAlignment="Center"/>
+          </Grid>
+        </Button.Content>
+      </Button>
+
+      <Button Grid.Row="0" Grid.Column="2" Width="150" Height="150" VerticalAlignment="Center"
+              Command="{Binding RestoreCommand}">
+        <Button.Content>
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*" />
+              <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Image Source="/ZSM.CMS.Presentation;component/Images/data-restore.png"/>
+            <TextBlock Grid.Row="1" Text="还原数据" TextAlignment="Center"/>
+          </Grid>
+        </Button.Content>
+      </Button>
+
+      <Button Grid.Row="1" Grid.Column="4" Command="{Binding BackCommand}" Style="{StaticResource ActionButtonStyle}">
+        <Button.Content>
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*" />
+              <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Image Source="/ZSM.CMS.Presentation;component/Images/back.png"/>
+            <TextBlock Grid.Row="1" Text="返回" TextAlignment="Center"/>
+          </Grid>
+        </Button.Content>
+      </Button>
+    </Grid>
+  </Grid>
+</UserControl>

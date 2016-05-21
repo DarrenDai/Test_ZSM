@@ -1,0 +1,19 @@
+﻿<Window x:Class="ZiCai.CMS.Launcher.Shell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:framworkEnum="clr-namespace:ZiCai.CMS.Common.EnumDefinitions;assembly=ZiCai.CMS.Common"
+        xmlns:reg="clr-namespace:Microsoft.Practices.Prism.Regions;assembly=Microsoft.Practices.Prism"
+        Title="姿彩化妆品会员管理系统"
+        ShowInTaskbar="True"
+        WindowStartupLocation="CenterScreen">
+  <Grid>
+    <ItemsControl reg:RegionManager.RegionName="{x:Static framworkEnum:RegionNames.MainRegion}">
+      <ItemsControl.ItemsPanel>
+        <ItemsPanelTemplate>
+          <Grid />
+        </ItemsPanelTemplate>
+      </ItemsControl.ItemsPanel>
+    </ItemsControl>
+  </Grid>
+
+</Window>
