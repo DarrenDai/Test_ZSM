@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZSM.CMS.Presentation", "ZSM.CMS\ZSM.CMS.Presentation.csproj", "{95CF1D12-6FF7-4551-A8C4-D3E0FEF83B5A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZSM.CMS.Presentation", "ZSM.CMS.Presentation\ZSM.CMS.Presentation.csproj", "{95CF1D12-6FF7-4551-A8C4-D3E0FEF83B5A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDSoft.Common", "DDSoft.Common\DDSoft.Common.csproj", "{1C0DD199-EC9C-47EF-94CE-D880E32F8855}"
 EndProject

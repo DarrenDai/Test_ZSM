@@ -115,7 +115,7 @@
       <Project>{1c0dd199-ec9c-47ef-94ce-d880e32f8855}</Project>
       <Name>DDSoft.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ZSM.CMS\ZSM.CMS.Presentation.csproj">
+    <ProjectReference Include="..\ZSM.CMS.Presentation\ZSM.CMS.Presentation.csproj">
       <Project>{95cf1d12-6ff7-4551-a8c4-d3e0fef83b5a}</Project>
       <Name>ZSM.CMS.Presentation</Name>
     </ProjectReference>
