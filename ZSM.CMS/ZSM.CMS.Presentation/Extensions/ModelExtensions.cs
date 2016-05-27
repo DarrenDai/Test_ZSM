@@ -8,7 +8,7 @@ using ZSM.CMS.Presentation.Models;
 
 namespace ZSM.CMS.Presentation.Extensions
 {
-    public static class EntityExtensions
+    public static class ModelExtensions
     {
         public static List<UserModel> ToUserList(this DataTable table)
         {

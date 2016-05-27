@@ -44,14 +44,6 @@ namespace ZSM.CMS.Presentation.ViewModels
 
         #endregion
 
-        #region Public Properties
-
-        public string CompanyName { get { return ApplicationContext.Current.Configuration.CompanyName; } }
-
-        public UserModel CurrentUser { get { return ApplicationContext.Current.CurrentUser; } }
-
-        #endregion
-
         #region Publc methos
 
         #endregion

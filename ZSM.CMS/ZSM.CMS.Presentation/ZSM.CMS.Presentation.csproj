@@ -96,7 +96,7 @@
     <Compile Include="Models\SearchCondition.cs" />
     <Compile Include="Events\ModuleEvents.cs" />
     <Compile Include="Extensions\DataModelExtensions.cs" />
-    <Compile Include="Extensions\EntityExtensions.cs" />
+    <Compile Include="Extensions\ModelExtensions.cs" />
     <Compile Include="Extensions\ViewModelExtensions.cs" />
     <Compile Include="Modules\DataManagementModule.cs" />
     <Compile Include="Modules\UsersModule.cs" />

@@ -86,7 +86,7 @@ namespace ZSM.CMS.Presentation.Behaviors
 
         #endregion
 
-        #region UI事件和辅助函数
+        #region UI Events and Methods
 
         //GridViewColumn click event handler
         static void OnGridViewColumnHeaderClicked(object sender, RoutedEventArgs e)
@@ -171,7 +171,6 @@ namespace ZSM.CMS.Presentation.Behaviors
         }
 
         #endregion
-
     }
 
     public class SortData
