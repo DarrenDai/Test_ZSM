@@ -8,5 +8,7 @@
     <ResourceDictionary Source="/DDSoft.Common;component/Styles/Common/DatePicker.xaml"/>
     <ResourceDictionary Source="/DDSoft.Common;component/Styles/Common/ComboBox.xaml"/>
     <ResourceDictionary Source="/DDSoft.Common;component/Styles/Common/PasswordBox.xaml"/>
+    <!-- Custom control styles -->
+    <ResourceDictionary Source="/DDSoft.Common;component/Controls/Themes/Generic.xaml"/>
   </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

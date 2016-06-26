@@ -19,13 +19,11 @@ namespace ZSM.CMS.Presentation.Modules
             this.Container = container;
             this.RegionManager = regionManager;
             this.EventAggregator = eventAggregator;
-
-            this.EventAggregator.GetEvent<CustomerManagementEvent>().Subscribe(new Action<object>(this.OnCustomerManagement), true);
         }
 
         public void Initialize()
         {
-           
+            this.EventAggregator.GetEvent<CustomerManagementEvent>().Subscribe(new Action<object>(this.OnCustomerManagement), true);
         }
 
         private void OnCustomerManagement(object param)

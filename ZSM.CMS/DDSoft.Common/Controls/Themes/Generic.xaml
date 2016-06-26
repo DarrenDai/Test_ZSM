@@ -1,0 +1,54 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:DDSoft.Common.Controls">
+  
+  <LinearGradientBrush x:Key="BUTTON_BACKGROUND" StartPoint="0,0" EndPoint="0,1">
+    <GradientStop Offset="0" Color="#BBDBF5FA"/>
+    <GradientStop Offset="1" Color="#BB6AC6D8"/>
+  </LinearGradientBrush>
+
+  <LinearGradientBrush x:Key="BUTTON_HOVER_BACKGROUND" StartPoint="0.188915,-0.016922" EndPoint="0.188915,0.983078">
+    <GradientStop Color="#FF6AC6D8" Offset="0"/>
+    <GradientStop Color="#FFDBF5FA" Offset="0.998901"/>
+  </LinearGradientBrush>
+  
+  <Style TargetType="{x:Type local:ActionButton}">
+    <Setter Property="SnapsToDevicePixels" Value="true"/>
+    <Setter Property="OverridesDefaultStyle" Value="False"/>
+    <Setter Property="FontFamily" Value="微软雅黑" />
+    <Setter Property="Foreground" Value="Green" />
+    <Setter Property="Padding" Value="10 7"/>
+    <Setter Property="Background" Value="{StaticResource BUTTON_BACKGROUND}"/>
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type local:ActionButton}">
+          <Border x:Name="m_Border"
+                    CornerRadius="5" 
+                    Background="{TemplateBinding Background}" 
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    Padding="{TemplateBinding Padding}">
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+              <Image Source="{Binding Path=PicturePath, RelativeSource={RelativeSource TemplatedParent}}"/>
+              <TextBlock Grid.Row="1" Text="{TemplateBinding ActionName}" TextAlignment="Center"/>
+              <!--<ContentPresenter Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>-->
+            </Grid>
+          </Border>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+              <Setter Property="Background" Value="{StaticResource BUTTON_HOVER_BACKGROUND}"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+              <Setter Property="Background" Value="#22202020"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>
