@@ -6,9 +6,34 @@
         ShowInTaskbar="True"
         WindowStartupLocation="CenterScreen"
         Title="正视美-客户管理系统" Height="700" Width="1000">
-
+  <Window.Resources>
+    <Storyboard x:Key="InTransition">
+      <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="MainItems" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:01" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="MainItems"
+                                     Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="-1800"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:01" Value="0" KeySpline="0,0.495999991893768,0.504000008106232,1"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+  </Window.Resources>
+  <Window.Triggers>
+    <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+      <BeginStoryboard Storyboard="{StaticResource InTransition}"/>
+    </EventTrigger>
+  </Window.Triggers>
   <Grid>
-    <ItemsControl reg:RegionManager.RegionName="{x:Static framworkEnum:RegionNames.MainRegion}">
+    <ItemsControl Name="MainItems" reg:RegionManager.RegionName="{x:Static framworkEnum:RegionNames.MainRegion}" RenderTransformOrigin="1,0">
+      <ItemsControl.RenderTransform>
+        <TransformGroup>
+          <ScaleTransform/>
+          <SkewTransform/>
+          <RotateTransform/>
+          <TranslateTransform/>
+        </TransformGroup>
+      </ItemsControl.RenderTransform>
       <ItemsControl.ItemsPanel>
         <ItemsPanelTemplate>
           <Grid />

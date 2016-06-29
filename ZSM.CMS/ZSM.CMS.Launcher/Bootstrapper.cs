@@ -25,11 +25,7 @@ namespace ZSM.CMS.Launcher
         /// </remarks>
         protected override DependencyObject CreateShell()
         {
-            var shell = ServiceLocator.Current.GetInstance<Shell>();
-            shell.Title = string.Format("{0} - 客户管理系统 - {1}",
-                ApplicationContext.Current.Configuration.CompanyName,
-                Assembly.GetExecutingAssembly().GetName().Version.ToString());
-            return shell;
+            return ServiceLocator.Current.GetInstance<Shell>();
         }
 
         /// <summary>
@@ -41,8 +37,11 @@ namespace ZSM.CMS.Launcher
         protected override void InitializeShell()
         {
             base.InitializeShell();
-
-            Application.Current.MainWindow = (Window)Shell;
+            var shell = (Window)Shell;
+            shell.Title = string.Format("{0} - 客户管理系统 - {1}",
+                                        ApplicationContext.Current.Configuration.CompanyName,
+                                        Assembly.GetExecutingAssembly().GetName().Version.ToString());
+            Application.Current.MainWindow = shell;
             Application.Current.MainWindow.Show();
         }
 
@@ -72,12 +71,6 @@ namespace ZSM.CMS.Launcher
         protected override void InitializeModules()
         {
             base.InitializeModules();
-            //this.ModuleCatalog.AddModule();
-            //IModule module = base.Container.Resolve<MainViewModule>(new ResolverOverride[0]);
-            //module.Initialize();
-            //base.Container.Resolve<CustomersModule>(new ResolverOverride[0]);
-            //base.Container.Resolve<UsersModule>(new ResolverOverride[0]);
-            //base.Container.Resolve<DataManagementModule>(new ResolverOverride[0]);
         }
 
         protected override void ConfigureModuleCatalog()

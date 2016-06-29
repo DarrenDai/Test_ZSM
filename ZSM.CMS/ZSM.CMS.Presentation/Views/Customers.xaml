@@ -4,11 +4,36 @@
         xmlns:Controls="clr-namespace:ZSM.CMS.Presentation.Controls"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:behaviors="clr-namespace:ZSM.CMS.Presentation.Behaviors"
-             >
+        x:Name="Self">
+  <UserControl.RenderTransform>
+    <TransformGroup>
+      <ScaleTransform/>
+      <SkewTransform/>
+      <RotateTransform/>
+      <TranslateTransform/>
+    </TransformGroup>
+  </UserControl.RenderTransform>
   <UserControl.Background>
     <ImageBrush ImageSource="/ZSM.CMS.Presentation;component/Images/common-bk.jpg"/>
   </UserControl.Background>
-
+  <UserControl.Resources>
+    <Storyboard x:Key="InTransition">
+      <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Self" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:01" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Self"
+                                     Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="-1800"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:01" Value="0"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+  </UserControl.Resources>
+  <UserControl.Triggers>
+    <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+      <BeginStoryboard Storyboard="{StaticResource InTransition}"/>
+    </EventTrigger>
+  </UserControl.Triggers>
   <Grid>
     <Grid.RowDefinitions>
       <RowDefinition Height="Auto" />
