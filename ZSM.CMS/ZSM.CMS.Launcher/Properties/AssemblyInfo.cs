@@ -51,8 +51,8 @@ using System.Windows;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.1.*")]
-[assembly: AssemblyFileVersion("1.1.*")]
+[assembly: AssemblyVersion("1.3.*")]
+[assembly: AssemblyFileVersion("1.3.*")]
 //Product code:{582CEDB4-1F90-41BB-8509-A12179DF3203}
 //Upgrade Code:{611EE8B9-B136-416B-84B9-2B88E5C31FA9} 1.0
 //{25C95F2E-77A3-4FA8-B909-AA8E0B624866} 1.1

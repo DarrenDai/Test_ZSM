@@ -4413,6 +4413,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>LAUNCHPROGRAMCOMPCODE</td><td>{054CB113-7CCC-4064-8CFC-ED16D80F4A1B}</td><td/></row>
 		<row><td>LAUNCHPROGRAMFILEKEY</td><td>zsm.cms.launcher.exe</td><td/></row>
 		<row><td>LAUNCHREADME</td><td>1</td><td/></row>
+		<row><td>MSIFASTINSTALL</td><td>2</td><td/></row>
 		<row><td>Manufacturer</td><td>##COMPANY_NAME##</td><td/></row>
 		<row><td>PIDKEY</td><td/><td/></row>
 		<row><td>PIDTemplate</td><td>12345&lt;###-%%%%%%%&gt;@@@@@</td><td/></row>
@@ -4442,7 +4443,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]ZSM.CMS.Launcher.exe</td><td/></row>
 		<row><td>ProductCode</td><td>{582CEDB4-1F90-41BB-8509-A12179DF3203}</td><td/></row>
 		<row><td>ProductName</td><td>ZSM</td><td/></row>
-		<row><td>ProductVersion</td><td>1.1</td><td/></row>
+		<row><td>ProductVersion</td><td>1.3</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -4458,7 +4459,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>SecureCustomProperties</td><td>USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR;DOTNETVERSION40CLIENT;ISACTIONPROP2;ISFOUNDNEWERPRODUCTVERSION</td><td/></row>
 		<row><td>SelectedSetupType</td><td>##IDS__DisplayName_Typical##</td><td/></row>
 		<row><td>SetupType</td><td>Typical</td><td/></row>
-		<row><td>UpgradeCode</td><td>{25C95F2E-77A3-4FA8-B909-AA8E0B624866}</td><td/></row>
+		<row><td>UpgradeCode</td><td>{074A2976-802C-4B8C-93B7-2E27C6720460}</td><td/></row>
 		<row><td>_IsMaintenance</td><td>Change</td><td/></row>
 		<row><td>_IsSetupTypeMin</td><td>Typical</td><td/></row>
 	</table>
@@ -4731,7 +4732,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="s72">ActionProperty</col>
 		<col def="S72">ISDisplayName</col>
 		<row><td>{00000000-0000-0000-0000-000000000000}</td><td>***ALL_VERSIONS***</td><td></td><td></td><td>2</td><td/><td>ISFOUNDNEWERPRODUCTVERSION</td><td>ISPreventDowngrade</td></row>
-		<row><td>{611EE8B9-B136-416B-84B9-2B88E5C31FA9}</td><td>1.0.0.0</td><td>1.0.0.0</td><td>2052</td><td>768</td><td/><td>ISACTIONPROP2</td><td>UpgradeEntry</td></row>
+		<row><td>{611EE8B9-B136-416B-84B9-2B88E5C31FA9}</td><td>1.0.0.0</td><td>2.0.0.0</td><td>2052</td><td>768</td><td/><td>ISACTIONPROP2</td><td>UpgradeEntry</td></row>
 	</table>
 
 	<table name="Verb">

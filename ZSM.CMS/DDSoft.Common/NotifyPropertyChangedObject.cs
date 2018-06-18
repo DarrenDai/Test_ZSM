@@ -7,10 +7,8 @@ namespace DDSoft.Common
 {
     public class NotifyPropertyChangedObject : INotifyPropertyChanged
     {
-        // Events
         public event PropertyChangedEventHandler PropertyChanged;
 
-        // Methods
         protected void OnPropertyChanged<TP>(Expression<Func<TP>> property)
         {
             PropertyInfo member = (property.Body as MemberExpression).Member as PropertyInfo;
@@ -18,22 +16,15 @@ namespace DDSoft.Common
             {
                 throw new ArgumentException("The lambda expression property should point to a valid Property");
             }
-            this.OnPropertyChanged(member.Name);
+            this.NotifyPropertyChanged(member.Name);
         }
 
-        //public void NotifyChanged<T>(Expression<Func<T>> propertyName)
+        //public void OnPropertyChanged([CallerMemberName] string name = "")
         //{
-        //    if (PropertyChanged != null)
-        //    {
-        //        var memberExpression = propertyName.Body as MemberExpression;
-        //        if (memberExpression != null)
-        //        {
-        //            PropertyChanged(this, new PropertyChangedEventArgs(memberExpression.Member.Name));
-        //        }
-        //    }
+        //    NotifyPropertyChanged(name);
         //}
 
-        public void OnPropertyChanged(string propertyName)
+        private void NotifyPropertyChanged(string propertyName)
         {
             if (this.PropertyChanged != null)
             {
@@ -41,7 +32,4 @@ namespace DDSoft.Common
             }
         }
     }
-
-
-
 }
