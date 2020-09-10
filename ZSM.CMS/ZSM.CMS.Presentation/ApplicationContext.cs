@@ -88,7 +88,7 @@ namespace ZSM.CMS.Presentation
         {
             get
             {
-                return "河南正视美科技有限公司";
+                return "郑州市正视乐商贸有限责任公司";
             }
         }
 

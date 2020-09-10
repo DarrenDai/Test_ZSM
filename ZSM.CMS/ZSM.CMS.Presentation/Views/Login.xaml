@@ -15,7 +15,7 @@
           <RowDefinition Height="*"/>
           <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Style="{StaticResource PageTitleStyle}" Text="正视美-客户管理系统" Margin="0 20 0 0" FontWeight="Normal"/>
+        <TextBlock Grid.Row="0" Style="{StaticResource PageTitleStyle}" Text="正视乐-客户管理系统" Margin="0 20 0 0" FontWeight="Normal"/>
         <Grid Grid.Row="1">
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
